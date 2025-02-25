@@ -1,0 +1,5 @@
+<div class="board">
+    <h2>Jira Board</h2>
+    <app-list *ngFor="let list of lists" [listTitle]="list.title" [tasks]="list.tasks"></app-list>
+    <button (click)="addList()">Add Category</button>
+</div>

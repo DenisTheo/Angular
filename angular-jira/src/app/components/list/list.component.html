@@ -1,0 +1,10 @@
+<div class="list">
+    <h3>{{listTitle}}</h3>
+    <div *ngIf="tasks.length > 0; else emptyMessage">
+        <app-task *ngFor="let task of tasks" [taskName]="task"></app-task>
+    </div>
+    <ng-template #emptyMessage>
+        <p>No task available.</p>
+    </ng-template>
+    <button (click)="addTask()">Add Task</button>
+</div>
